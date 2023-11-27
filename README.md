@@ -34,7 +34,17 @@ rnbip
 ```
 
 
-## Now that everything is installed and working, you can copy paste the .asm files _without_ comments
+# Now that everything is installed and working, you can copy paste the .asm files _without_ comments
+
+## Now to understand how it works :
+- So basically you run an assembly code in the editor which is on the top right section, this is your IDE basically.
+- Next you compile the code, keep in mind this thing doesn't work with comments of asm like ;, so be sure to remove them if you get compiler error.
+- Now it works just like how gdb works with C, it changes the color of the data lines to demostrate what is happening on each clock cycle. 
+- **Instruction** - this shows which command is going on.
+- **OpCode** - this shows the operation code (given in the pdf for each instruction)
+- **PC** - VERY IMP if you want to write loops, it shows where the PC is pointing to so when you write loops using Jumps you have to mention the address of line which shows in PC not in your code.
+- **Register Array** - this shows what is stored in each array in hexadecimal system.
+- Next clock cycle , reset, run 10 cycles, do exactly what they say.
 
 ### Add 2 Numbers 
 -  **CLR:** Clear all registers and the carry flag.
