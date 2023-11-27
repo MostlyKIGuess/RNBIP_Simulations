@@ -73,3 +73,16 @@ rnbip
 - **JUD 06:** Jump to address 06 unconditionally.
 
 
+### Fibbonaci 
+- **CLR:** Clear all registers and the carry flag.
+- **MVI R1 00:** Load immediate value 00 into register 1 as we are basically storing the n-2th term here.
+- **MVI R2 01:** Load immediate value 01 into register 2 as 1 because we are storing n-1th term here.
+- **MVI R3 04:** This is basically the n for the term you want to find.
+- **MVS R2:** We are storing n-1th term to R0.
+- **ADA R1:** We are adding n-2th term to R0.
+- Now here is the beauty.
+- **MVD R2:** Now the current term becomes n-1th term so storing R0 into R2.
+- **SCA R1:** doing this we will get as R0= R1+R2, now it becomes R1+R2-R1 becoming the n-1th term but technically n-2th term for the next permutation and this is the beauty.
+-**MVD R1:** now storing that n-2th term to our original n-2th term storage.
+- **DCR R3:** Decrementing R3 after one permutation.
+- **JUD 08:** Jumping to 0x08 which is MVS R2 to run this program in loop.
